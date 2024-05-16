@@ -29,7 +29,7 @@ public class VRButton : MonoBehaviour
         if (isPressed)
         {
             button.transform.localPosition = new Vector3(0, 0.003f, 0);
-            presser = other.GameObject;
+            presser = other.gameObject;
             sound.Play();
             isPressed = true;
         }
@@ -37,7 +37,7 @@ public class VRButton : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other = pressed) ;
+        if (other == presser)
         {
             button.transform.localPosition = new Vector3(0, 0.015f, 0);
             onRelease.Invoke();
